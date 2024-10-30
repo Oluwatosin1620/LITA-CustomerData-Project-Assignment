@@ -69,4 +69,27 @@ The following insights will be drawn:
 
   ### Data Visualization
   **Pivot Table** a data summarization tool found in MS Excel was used for visualization.
-  
+
+
+## SQL (STANDARD QUERY LANGUAGE)
+---
+It is used for querying, storing and managing data in a database. The following queries: were derived in the analysis:
+
+**Insights Derived**:
+1. Total sales for each Product Category:
+
+~~~ SQL
+SELECT region, count(customerID) as TotalCustomers
+from [dbo].[LITA Capstone Dataset12]
+Group by region
+order by TotalCustomers
+~~~
+
+2. Find the number of sales transactions in each region:
+
+~~~ SQL
+SELECT SubscriptionType, count(customerid) as MostPopular
+FROM [dbo].[LITA Capstone Dataset12]
+GROUP BY SubscriptionType
+ORDER BY MostPopular
+~~~  
